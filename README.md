@@ -1,5 +1,5 @@
 # nrfind
-[![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)](https://crates.io/crates/nrfind)
+[![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)](https://crates.io/crates/nrfind) [![Build Status](https://travis-ci.org/SilverWingedSeraph/nrfind.svg?branch=master)](https://travis-ci.org/SilverWingedSeraph/nrfind)
 
 `nrfind` provides a Newton-Raphson root finder for arbitrary differentiable functions.
 
