@@ -1,7 +1,9 @@
 # nrfind
-![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)
+[![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)](https://crates.io/crates/nrfind)
 
 `nrfind` provides a Newton-Raphson root finder for arbitrary differentiable functions.
+
+Documentation is available on [docs.rs](https://docs.rs/nrfind)
 
 A simple example of usage to find the roots of x^3 + x^2 + 1 in 18 iterations:
 
