@@ -2,6 +2,11 @@
 name = "nrfind"
 version = "0.1.0"
 authors = ["SilverWingedSeraph <lfstindall@gmail.com>"]
+description = "A set of useful mathematical functions for floating point numbers based on the Newton-Raphson method for finding roots."
+
+repository = "https://github.com/SilverWingedSeraph/nrfind"
+readme = "README.md"
+license = "MIT"
 
 [dependencies]
 num = "0.1.36"
