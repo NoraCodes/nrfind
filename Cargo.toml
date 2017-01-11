@@ -1,6 +1,7 @@
 [package]
-name = "nrfind-t"
+name = "nrfind"
 version = "0.1.0"
 authors = ["SilverWingedSeraph <lfstindall@gmail.com>"]
 
 [dependencies]
+num = "0.1.36"
