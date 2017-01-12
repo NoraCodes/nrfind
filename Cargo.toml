@@ -1,6 +1,6 @@
 [package]
 name = "nrfind"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["SilverWingedSeraph <lfstindall@gmail.com>"]
 description = "A set of useful mathematical functions for floating point numbers based on the Newton-Raphson method for finding roots."
 

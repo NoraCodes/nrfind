@@ -1,4 +1,4 @@
-use std::ops::{Sub, Mul, Div};
+use std::ops::{Sub, Mul, Div, Add};
 use num::Float;
 use super::find_root;
 
@@ -19,7 +19,7 @@ use super::find_root;
 /// // This will produce a close approximation of the actual square root
 /// let value = find_sqrt(&radicand, &guess, &precision, iterations).unwrap();
 ///
-/// let actual = 5.0497;
+/// let actual: f64 = 5.0497;
 /// let difference = (value - actual).abs();
 ///
 /// assert!(difference < precision);
@@ -32,11 +32,12 @@ use super::find_root;
 pub fn find_sqrt<N>(radicand: &N, x0: &N, 
                     acceptable_err: &N, max_iterations: i32)
                     -> Option<N> 
-                    where N: Float + Div + Sub + Mul + PartialOrd + From<f64> {
+                    where N: Float + Div + Sub + Mul + Add + PartialOrd {
 
 
     find_root(&|x: N| x.powi(2) - *radicand, 
-              &|x: N| x * 2.0.into(), 
+              // x + x = 2x, this lets us forgoe the From<f64> trait bound.
+              &|x: N| x + x, 
               x0, 
               acceptable_err, 
               max_iterations)
