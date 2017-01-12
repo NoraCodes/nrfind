@@ -5,7 +5,8 @@ extern crate num;
 use num::Float;
 use std::ops::{Div, Sub};
 
-type RealFn<N> where N: Float + Div + Sub + PartialOrd = Fn(N) -> N;
+mod sqrt;
+pub use sqrt::find_sqrt;
 
 /// Uses the Newton-Raphson method to find roots for `function` given
 /// that `derivative` is the first derivative of `function`.
@@ -45,8 +46,8 @@ type RealFn<N> where N: Float + Div + Sub + PartialOrd = Fn(N) -> N;
 /// assert!(difference < 0.1);
 /// ```
 /// 
-pub fn find_root<N>(function: &RealFn<N>, derivative: &RealFn<N>, x0: &N, acceptable_err: &N, max_iterations: i32) -> Option<N> 
-    where N: Float + Div + Sub + PartialOrd
+pub fn find_root<N>(function: &Fn(N) -> N, derivative: &Fn(N) -> N, x0: &N, acceptable_err: &N, max_iterations: i32) -> Option<N> 
+    where N: Float + Div + Sub + PartialOrd 
 {
     let mut current_x: N = *x0;
     let mut next_x: N;
