@@ -19,9 +19,8 @@ pub fn test_find_root_fails_with_precision() {
 #[test]
 pub fn test_find_root_finds_result_to_precision() {
     let precision = 0.1;
-    let result = find_root(&f, &fd, &100.0, &precision, 18);
-    assert_ne!(None, result);
-    let result = result.unwrap();
+    let result = find_root(&f, &fd, &100.0, &precision, 18).unwrap();
+
     let actual: f64 = -1.4656;
     let difference = (actual - result).abs();
     assert!(difference <= precision);
