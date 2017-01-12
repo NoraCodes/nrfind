@@ -21,21 +21,20 @@ fn fd(x: f64) -> f64 {
 }
 
 fn main() {
-    let initial_guess = 100;
+    let initial_guess = 100.0;
     let precision = 0.1;
     let iterations = 18;
 
-    let result = nrfind::find_root(&f, &fd, 
-                                   &initial_guess, 
-                                   &precision, 
-                                   iterations).unwrap();
-
-    // This is known to be the actual answer
-    let actual: f64 = -1.4656;
-
-    // The difference between the actual answer and the found result
-    // is less than the provided precision.
-    let difference = (actual - result).abs();
-    assert!(difference <= precision);
+    println!("x^3 + x^2 + 1 = 0 when x ~= {}",
+             nrfind::find_root(&f, &fd, 
+                               &initial_guess, 
+                               &precision, 
+                               iterations).unwrap());
 }
 ```
+
+This will print: `x^3 + x^2 + 1 = 0 when x ~= -1.4675327346575013`.
+
+Note that while this method is guaranteed to approximate _a_ root, it may not be
+the root you care about! Changing the given `x0` guess can have an impact on 
+which root is approximated.
