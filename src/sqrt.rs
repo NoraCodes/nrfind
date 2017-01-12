@@ -16,12 +16,17 @@ use super::find_root;
 /// let radicand = 25.6;
 /// let guess = 10.0;
 ///
+/// // This will produce a close approximation of the actual square root
 /// let value = find_sqrt(&radicand, &guess, &precision, iterations).unwrap();
 ///
 /// let actual = 5.0497;
 /// let difference = (value - actual).abs();
 ///
 /// assert!(difference < precision);
+/// 
+/// // This will fail, as there is no real solution.
+/// let value = find_sqrt(&(-radicand), &guess, &precision, iterations);
+/// assert!(value.is_none());
 /// ```
 ///
 pub fn find_sqrt<N>(radicand: &N, x0: &N, 
