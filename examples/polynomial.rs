@@ -17,7 +17,7 @@ fn main() {
 
     println!("x^3 + x^2 + 1 = 0 when x ~= {}",
              nrfind::find_root(&f, &fd, 
-                               &initial_guess, 
-                               &precision, 
+                               initial_guess, 
+                               precision, 
                                iterations).unwrap());
 }
