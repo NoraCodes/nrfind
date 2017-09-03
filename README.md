@@ -1,5 +1,5 @@
 # nrfind
-[![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)](https://crates.io/crates/nrfind) [![Build Status](https://travis-ci.org/SilverWingedSeraph/nrfind.svg?branch=master)](https://travis-ci.org/SilverWingedSeraph/nrfind)
+[![Crates.io version badge](https://img.shields.io/crates/v/nrfind.svg)](https://crates.io/crates/nrfind) [![Build Status](https://travis-ci.org/LeoTindall/nrfind.svg?branch=master)](https://travis-ci.org/LeoTindall/nrfind)
 
 `nrfind` provides a Newton-Raphson root finder for arbitrary differentiable functions, as well as convenient wrappers for common use cases like square roots.
 
@@ -27,8 +27,8 @@ fn main() {
 
     println!("x^3 + x^2 + 1 = 0 when x ~= {}",
              nrfind::find_root(&f, &fd, 
-                               &initial_guess, 
-                               &precision, 
+                               initial_guess, 
+                               precision, 
                                iterations).unwrap());
 }
 ```
