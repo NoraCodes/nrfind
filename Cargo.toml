@@ -1,6 +1,6 @@
 [package]
 name = "nrfind"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["Leo Tindall <lfstindall@gmail.com>"]
 description = "A set of useful mathematical functions for floating point numbers based on the Newton-Raphson method for finding roots."
 
@@ -13,8 +13,8 @@ keywords = ["newton-raphson", "root", "numeric", "calculus"]
 categories = ["algorithms", "science"]
 
 [badges]
-is-it-maintained-issue-resolution = {repository = "https://github.com/LeoTindall/nrfind"}
-is-it-maintained-open-issues = {repository = "https://github.com/LeoTindall/nrfind"}
+is-it-maintained-issue-resolution = {repository = "LeoTindall/nrfind"}
+is-it-maintained-open-issues = {repository = "LeoTindall/nrfind"}
 maintenance = { status = "passively-maintained" }
 
 travis-ci = { repository = "LeoTindall/nrfind" }
