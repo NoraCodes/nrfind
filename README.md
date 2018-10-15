@@ -7,7 +7,7 @@ Documentation is available on [docs.rs](https://docs.rs/nrfind)
 
 A simple example of usage to find the roots of x^3 + x^2 + 1 in 18 iterations:
 
-```
+```rust
 extern crate nrfind;
 
 // The function for whose roots find_root will solve
